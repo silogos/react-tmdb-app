@@ -1,11 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
+import { TMDB_API_KEY } from "../config";
 
 const BASE_URL = "https://api.themoviedb.org/3";
-const TOKEN =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZjBhMWViZWVkZjAzZTEwMzU3MzhjZTlhM2RmMDMwMiIsIm5iZiI6MTczNzQyNzc0NC4yNTYsInN1YiI6IjY3OGYwYjIwNDM3NTg5ZjM4NjViMmFhNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-r5oi62CVbhXf7lp379gVnQ2eh8CG4vQxmebxn4tXxQ";
 const headers = {
   "Content-Type": "application/json",
-  Authorization: `Bearer ${TOKEN}`,
+  Authorization: `Bearer ${TMDB_API_KEY}`,
 };
 
 type UseFetch<T> = {
