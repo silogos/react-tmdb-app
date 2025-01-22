@@ -93,7 +93,7 @@ describe("useCredits", () => {
       cast: [{ id: 1, name: "Actor 1" }],
       crew: [],
     };
-    (useFetch as vi.Mock).mockReturnValue({
+    (useFetch as Mock).mockReturnValue({
       data: mockData,
       isLoading: false,
       isError: false,
@@ -113,7 +113,7 @@ describe("useCredits", () => {
       cast: [],
       crew: [{ id: 2, name: "Crew 1" }],
     };
-    (useFetch as vi.Mock).mockReturnValue({
+    (useFetch as Mock).mockReturnValue({
       data: mockData,
       isLoading: false,
       isError: false,

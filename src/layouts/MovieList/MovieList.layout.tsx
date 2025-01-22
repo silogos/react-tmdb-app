@@ -1,7 +1,6 @@
 import { Outlet } from "react-router";
 import FilterButton from "@/components/FilterButton";
 import { MovieListHero, SearchInput } from "./MovieList.components";
-import useBackgroundImage from "@/hooks/useBackgroundImage";
 
 function MovieListLayout() {
   const categoryList = [

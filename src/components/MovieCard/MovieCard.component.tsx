@@ -2,7 +2,6 @@ import { NavLink } from "react-router";
 import { getReleaseYear } from "@/utils/Movie.utils";
 
 import { MovieCardProps } from "./MovieCard.type";
-import { ViewfinderCircleIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Poster from "../Poster";
 
 function MovieCard({ id, title, releaseDate, poster }: MovieCardProps) {
