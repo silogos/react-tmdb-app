@@ -1,0 +1,332 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Search Page > renders toMatchSnapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="relative w-full min-h-screen"
+      >
+        <header
+          class="overflow-hidden bg-gray-300 bg-opacity-20"
+        >
+          <div
+            class="mx-auto max-w-screen-xl px-8 py-4"
+          >
+            <div
+              class="flex items-stretch"
+            >
+              <a
+                aria-current="page"
+                class="cursor-pointer hover:underline flex flex-row items-center text-base rounded-lg text-nowrap text-gray-400 active"
+                data-discover="true"
+                href="/"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="size-6 inline"
+                  data-slot="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span
+                  class="hidden lg:block"
+                >
+                  Back to list
+                </span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <section
+          class="overflow-hidden py-4"
+          id="movie-list"
+        >
+          <div
+            class="mx-auto max-w-screen-xl px-6 lg:px-8"
+          >
+            <h3
+              class="text-gray-300 mb-4"
+            >
+              Search for: 
+            </h3>
+            <form
+              class="mb-8"
+            >
+              <input
+                class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
+                minlength="3"
+                name="query"
+                placeholder="Search..."
+                required=""
+                type="search"
+              />
+            </form>
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+            >
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="relative w-full min-h-screen"
+    >
+      <header
+        class="overflow-hidden bg-gray-300 bg-opacity-20"
+      >
+        <div
+          class="mx-auto max-w-screen-xl px-8 py-4"
+        >
+          <div
+            class="flex items-stretch"
+          >
+            <a
+              aria-current="page"
+              class="cursor-pointer hover:underline flex flex-row items-center text-base rounded-lg text-nowrap text-gray-400 active"
+              data-discover="true"
+              href="/"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-6 inline"
+                data-slot="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                class="hidden lg:block"
+              >
+                Back to list
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <section
+        class="overflow-hidden py-4"
+        id="movie-list"
+      >
+        <div
+          class="mx-auto max-w-screen-xl px-6 lg:px-8"
+        >
+          <h3
+            class="text-gray-300 mb-4"
+          >
+            Search for: 
+          </h3>
+          <form
+            class="mb-8"
+          >
+            <input
+              class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
+              minlength="3"
+              name="query"
+              placeholder="Search..."
+              required=""
+              type="search"
+            />
+          </form>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+          >
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
