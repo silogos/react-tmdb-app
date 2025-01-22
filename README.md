@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a movie application built with React. It allows users to browse and search for movies.
 
-Currently, two official plugins are available:
+## Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can access the live application at: [https://react-tmdb-app-mocha.vercel.app/](https://react-tmdb-app-mocha.vercel.app/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Browse popular movies
+- Search for movies
+- View movie details
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To run this project locally, follow these steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd movie-app
+   ```
+3. Create a `.env` file in the root directory (see the .env.example) and add your TMDB API key:
+   ```bash
+   VITE_TMDB_API_KEY=your_tmdb_api_key_here
+   ```
+4. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+5. Start the development server:
+   ```bash
+   pnpm dev
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Technologies Used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- React
+- React Router
+- Tailwind
+- Vercel
+
+## License
+
+This project is licensed under the MIT License.
