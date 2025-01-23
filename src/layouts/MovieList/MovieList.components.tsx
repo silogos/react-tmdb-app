@@ -20,6 +20,7 @@ export function SearchInput() {
 
   return (
     <form
+      className="w-full lg:w-auto"
       onSubmit={(evt) => {
         evt.preventDefault();
         console.log("Submited");
@@ -27,7 +28,7 @@ export function SearchInput() {
     >
       <input
         type="search"
-        className="w-64 border-2 rounded-lg  px-4 py-2 bg-gray-300"
+        className="w-full lg:w-64 border-2 rounded-lg  px-4 py-2 bg-gray-300"
         placeholder="Search..."
         onKeyDown={(evt) => {
           if (evt.currentTarget.checkValidity() && evt.key === "Enter") {

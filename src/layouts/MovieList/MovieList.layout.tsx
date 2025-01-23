@@ -33,7 +33,7 @@ function MovieListLayout() {
 
         <section id="movie-list" className="overflow-hidden py-4">
           <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
-            <div className="flex flex-row items-center justify-between mb-4">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4">
               <div className="flex flex-row flex-nowrap overflow-x-auto gap-4">
                 {categoryList.map(({ filterId, title }) => (
                   <FilterButton
