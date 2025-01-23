@@ -61,11 +61,13 @@ exports[`Search Page > renders toMatchSnapshot 1`] = `
               Search for: 
             </h3>
             <form
-              class="mb-8"
+              class="mb-4"
+              data-testid="search-form"
+              novalidate=""
             >
               <input
                 class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
-                minlength="3"
+                data-testid="search-input"
                 name="query"
                 placeholder="Search..."
                 required=""
@@ -198,11 +200,13 @@ exports[`Search Page > renders toMatchSnapshot 1`] = `
             Search for: 
           </h3>
           <form
-            class="mb-8"
+            class="mb-4"
+            data-testid="search-form"
+            novalidate=""
           >
             <input
               class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
-              minlength="3"
+              data-testid="search-input"
               name="query"
               placeholder="Search..."
               required=""

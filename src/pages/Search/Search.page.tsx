@@ -1,8 +1,9 @@
 import MovieListComponent from "@/components/MovieList";
+import SearchInput from "@/components/SearchInput";
 import useBackgroundImage from "@/hooks/useBackgroundImage";
 import useMovies from "@/hooks/useMovies";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { NavLink, useSearchParams } from "react-router";
 
 function SearchPage() {
@@ -20,6 +21,15 @@ function SearchPage() {
     initialSearchText: defaultValue,
   });
   useBackgroundImage(data[0]?.backdrop_path);
+
+  const handleSearch = useCallback(
+    (searchText: string) => {
+      setSearchText(searchText);
+      searchParams.set("query", searchText);
+      setSearchParams(searchParams);
+    },
+    [searchParams, setSearchParams, setSearchText]
+  );
 
   useEffect(() => {
     setSearchText(defaultValue);
@@ -44,26 +54,7 @@ function SearchPage() {
       <section id="movie-list" className="overflow-hidden py-4">
         <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
           <h3 className="text-gray-300 mb-4">Search for: {defaultValue}</h3>
-          <form
-            className="mb-8"
-            onSubmit={(evt) => {
-              evt.preventDefault();
-              const searctInput = evt.currentTarget.query.value;
-              setSearchText(searctInput);
-              searchParams.set("query", searctInput);
-              setSearchParams(searchParams);
-              console.log("Submited", evt.currentTarget.query.value);
-            }}
-          >
-            <input
-              name="query"
-              type="search"
-              className="w-full border-2 rounded-lg  px-4 py-2 bg-white"
-              placeholder="Search..."
-              minLength={3}
-              required
-            />
-          </form>
+          <SearchInput className="mb-4" onSubmit={handleSearch} />
           <MovieListComponent
             movies={data}
             isLoading={isLoading}

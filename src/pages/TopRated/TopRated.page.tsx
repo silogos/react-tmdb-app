@@ -14,10 +14,7 @@ function TopRatedPage() {
       isLoading={isLoading}
       isError={isError}
       hasMoreData={hasMoreData}
-      onLoadMore={() => {
-        console.log("Load more clicked");
-        fetchNextData();
-      }}
+      onLoadMore={fetchNextData}
     />
   );
 }

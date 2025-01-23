@@ -2,10 +2,10 @@ import { describe, it, expect } from "vitest";
 import Poster from "./Poster.component";
 import { render } from "@testing-library/react";
 
-describe("BackDrop Component", () => {
+describe("Poster Component", () => {
   it("renders correctly", () => {
-    const backdrop = render(<Poster poster="testPath" />);
-    expect(backdrop).toBeTruthy();
+    const component = render(<Poster poster="testPath" />);
+    expect(component).toBeTruthy();
   });
 
   it("displays the correct image source", () => {

@@ -7,7 +7,6 @@ import {
 } from "@heroicons/react/16/solid";
 
 import { getReleaseYear } from "@/utils/Movie.utils";
-import { MovieDetail } from "@/types/Movie.types";
 
 import {
   getRatingText,
@@ -16,10 +15,10 @@ import {
 } from "@/utils/Movie.utils";
 import Banner from "../Banner";
 import Poster from "../Poster";
-
-type MovieDetailHeaderProps = {
-  data: MovieDetail;
-};
+import {
+  MovieDetailHeaderProps,
+  MovieDetailHeroProps,
+} from "./MovieDetail.type";
 
 export function MovieDetailHeader({ data }: MovieDetailHeaderProps) {
   return (
@@ -46,10 +45,6 @@ export function MovieDetailHeader({ data }: MovieDetailHeaderProps) {
     </header>
   );
 }
-
-type MovieDetailHeroProps = {
-  data: MovieDetail;
-};
 
 export function MovieDetailHero({ data }: MovieDetailHeroProps) {
   return (

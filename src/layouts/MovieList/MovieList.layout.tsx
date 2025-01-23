@@ -1,30 +1,37 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import FilterButton from "@/components/FilterButton";
-import { MovieListHero, SearchInput } from "./MovieList.components";
+import { MovieListHero } from "./MovieList.components";
+import SearchInput from "@/components/SearchInput";
+import { useCallback } from "react";
+
+const categoryList = [
+  {
+    filterId: "/",
+    title: "All",
+  },
+  {
+    filterId: "/movies/now-playing",
+    title: "Now Playing",
+  },
+  {
+    filterId: "/movies/popular",
+    title: "Popular",
+  },
+  {
+    filterId: "/movies/top-rated",
+    title: "Top Rated",
+  },
+  {
+    filterId: "/movies/upcoming",
+    title: "Upcoming",
+  },
+];
 
 function MovieListLayout() {
-  const categoryList = [
-    {
-      filterId: "/",
-      title: "All",
-    },
-    {
-      filterId: "/movies/now-playing",
-      title: "Now Playing",
-    },
-    {
-      filterId: "/movies/popular",
-      title: "Popular",
-    },
-    {
-      filterId: "/movies/top-rated",
-      title: "Top Rated",
-    },
-    {
-      filterId: "/movies/upcoming",
-      title: "Upcoming",
-    },
-  ];
+  const navigate = useNavigate();
+  const handleSearch = useCallback((searchText: string) => {
+    navigate(`/movies/search?query=${searchText}`);
+  }, []);
 
   return (
     <>
@@ -43,7 +50,8 @@ function MovieListLayout() {
                   />
                 ))}
               </div>
-              <SearchInput />
+
+              <SearchInput onSubmit={handleSearch} />
             </div>
 
             <Outlet />
