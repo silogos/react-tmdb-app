@@ -37,8 +37,8 @@ function useFetch<T>({
 
       return responseJson;
     } catch (error) {
-      setIsError(true);
       console.error("useFetch error:", error);
+      setIsError(true);
     } finally {
       setIsLoading(false);
     }

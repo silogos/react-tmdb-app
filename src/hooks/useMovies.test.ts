@@ -98,4 +98,47 @@ describe("useMovies", () => {
     expect(result.current.data).toEqual([...dummyData, ...dummyData]);
     expect(result.current.hasMoreData).toBe(false);
   });
+
+  it("fetches search data", async () => {
+    (useFetch as Mock).mockReturnValue({
+      getData: vi.fn().mockResolvedValue({
+        page: 1,
+        total_pages: 3,
+        results: dummyData,
+      }),
+    });
+
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useMovies({ path: "/movies" })
+    );
+
+    await waitForNextUpdate();
+
+    expect(result.current.data).toEqual(dummyData);
+    expect(result.current.hasMoreData).toBe(true);
+
+    (useFetch as Mock).mockReturnValue({
+      getData: vi.fn().mockResolvedValue({
+        page: 1,
+        total_pages: 1,
+        results: dummyData,
+      }),
+    });
+
+    act(() => {
+      result.current.setSearchText("test");
+    });
+
+    expect(result.current.isLoading).toEqual(true);
+    expect(result.current.data).toEqual([]);
+
+    await waitForNextUpdate();
+
+    expect(result.current.data).toEqual(dummyData);
+    expect(result.current.hasMoreData).toBe(false);
+
+    act(() => {
+      result.current.fetchNextData();
+    });
+  });
 });

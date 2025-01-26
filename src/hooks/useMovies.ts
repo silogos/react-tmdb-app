@@ -1,17 +1,9 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Movie } from "@/types/Movie.types";
 import useFetch from "./useFetch";
+import usePrev from "./usePrev";
 
 type MoviesList = Record<number, Movie[]>;
-
-function usePrev<T>(value: T) {
-  const prev = useRef<T>(value);
-  useEffect(() => {
-    prev.current = value;
-  }, [value]);
-
-  return prev.current;
-}
 
 function useMovies({
   path,
@@ -40,7 +32,7 @@ function useMovies({
   const [hasMoreData, setHasMoreData] = useState(false);
 
   const data = useMemo(
-    () => Object.entries(movies).flatMap(([, value]) => value) || [],
+    () => Object.entries(movies).flatMap(([, value]) => value),
     [movies]
   );
 
