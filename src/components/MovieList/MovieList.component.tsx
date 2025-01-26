@@ -43,6 +43,7 @@ function MovieList({
             poster={movie.poster_path}
             releaseDate={movie.release_date}
             title={movie.title}
+            voteAverage={movie.vote_average}
           />
         ))}
         {isLoading && <ListLoading />}

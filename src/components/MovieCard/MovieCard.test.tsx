@@ -2,13 +2,15 @@ import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router";
 import MovieCard from "./MovieCard.component";
+import { MovieCardProps } from "./MovieCard.type";
 
 describe("MovieCard", () => {
-  const movie = {
+  const movie: MovieCardProps = {
     id: 1,
     title: "Inception",
     releaseDate: "2010-07-16",
     poster: "inception.jpg",
+    voteAverage: 1,
   };
 
   it("renders correctly", () => {

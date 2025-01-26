@@ -4,7 +4,18 @@ import { getReleaseYear } from "@/utils/Movie.utils";
 import { MovieCardProps } from "./MovieCard.type";
 import Poster from "../Poster";
 
-function MovieCard({ id, title, releaseDate, poster }: MovieCardProps) {
+const _renderInfo = ({ title, releaseDate }: MovieCardProps) => {
+  return (
+    <>
+      <div className="text-base mb-1">{title}</div>
+      <div className="text-sm text-gray-400">{getReleaseYear(releaseDate)}</div>
+    </>
+  );
+};
+
+function MovieCard(props: MovieCardProps) {
+  const { id, poster, voteAverage } = props;
+
   return (
     <NavLink
       to={`/movie/${id}`}
@@ -13,17 +24,14 @@ function MovieCard({ id, title, releaseDate, poster }: MovieCardProps) {
       <Poster poster={poster}>
         <div className="hidden lg:flex duration-150 group-hover:opacity-100 opacity-0 absolute inset-0 justify-center items-center z-20 bg-black bg-opacity-50" />
         <div className="hidden lg:flex absolute bottom-0 group-hover:opacity-100 opacity-0 duration-150 w-full flex-col p-4 text-white bg-black bg-opacity-50 z-30">
-          <div className="text-base mb-1">{title}</div>
-          <div className="text-sm text-gray-400">
-            {getReleaseYear(releaseDate)}
-          </div>
+          {_renderInfo(props)}
+        </div>
+        <div className="lg:group-hover:hidden absolute top-3 right-3 px-2 py-1 bg-gray-50 rounded-lg self-start text-xs text-black mb-1">
+          {voteAverage.toFixed(1)}
         </div>
       </Poster>
-      <div className="flex lg:hidden flex-col text-gray-300">
-        <div className="text-base mb-1">{title}</div>
-        <div className="text-sm text-gray-400">
-          {getReleaseYear(releaseDate)}
-        </div>
+      <div className="flex lg:hidden flex-col text-gray-300 w-auto">
+        {_renderInfo(props)}
       </div>
     </NavLink>
   );

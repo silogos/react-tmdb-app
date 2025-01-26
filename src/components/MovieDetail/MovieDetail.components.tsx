@@ -59,7 +59,10 @@ export function MovieDetailHero({ data }: MovieDetailHeroProps) {
             </h1>
             <div className="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-base">
               {data.genres.map((genre) => (
-                <div className="border border-gray-300 text-sm px-2 py-1 rounded-full ">
+                <div
+                  key={genre.id}
+                  className="border border-gray-300 text-sm px-2 py-1 rounded-full "
+                >
                   {genre.name}
                 </div>
               ))}
