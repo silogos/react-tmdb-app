@@ -78,7 +78,6 @@ exports[`MovieList Page > renders toMatchSnapshot 1`] = `
                 </a>
               </div>
               <form
-                data-testid="search-form"
                 novalidate=""
               >
                 <input
@@ -170,7 +169,6 @@ exports[`MovieList Page > renders toMatchSnapshot 1`] = `
               </a>
             </div>
             <form
-              data-testid="search-form"
               novalidate=""
             >
               <input

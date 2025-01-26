@@ -1,6 +1,7 @@
-import { describe, it, expect, vitest } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import SearchInput from "./SearchInput.component";
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("SearchInput Component", () => {
   it("renders correctly", () => {
@@ -8,8 +9,9 @@ describe("SearchInput Component", () => {
     expect(component).toBeTruthy();
   });
 
-  it("displays the correct image source", () => {
-    const handleSubmit = vitest.fn();
+  it("displays the correct image source", async () => {
+    const user = userEvent.setup();
+    const handleSubmit = vi.fn();
     const { getByTestId } = render(<SearchInput onSubmit={handleSubmit} />);
     const inputSearch = getByTestId(
       "search-input"
@@ -17,11 +19,12 @@ describe("SearchInput Component", () => {
 
     expect(inputSearch).toBeInTheDocument();
 
-    fireEvent.change(inputSearch, { target: { value: "test" } });
-    expect(inputSearch.value).toBe("test");
+    inputSearch.focus();
+    expect(inputSearch).toHaveFocus();
 
-    // fireEvent.submit(inputSearch.closest("form")!);
+    await user.keyboard("hello{Enter}");
 
-    // expect(handleSubmit).toHaveBeenCalled();
+    expect(handleSubmit).toHaveBeenCalledExactlyOnceWith("hello");
+    expect(handleSubmit).toHaveBeenCalledTimes(1);
   });
 });
