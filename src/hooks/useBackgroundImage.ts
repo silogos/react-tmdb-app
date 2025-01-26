@@ -1,21 +1,16 @@
+import { loadImage, wait } from "@/utils/Common.utils";
 import { useEffect } from "react";
 
 function useBackgroundImage(imagePath?: string) {
   useEffect(() => {
     if (!imagePath) return;
-    async function changeBG() {
-      const newImageUrl = `https://image.tmdb.org/t/p/w300/${imagePath}`;
-      const img = new Image();
-      img.src = newImageUrl;
-      img.onload = () => {
-        document.body.style.backgroundImage = `url(${newImageUrl})`;
-        document
-          .getElementById("backdrop-overlay")
-          ?.classList.add("opacity-80");
-      };
-    }
 
-    changeBG();
+    const imageUrl = `https://image.tmdb.org/t/p/w300/${imagePath}`;
+
+    Promise.all([loadImage(imageUrl), wait(300)]).then(() => {
+      document.body.style.backgroundImage = `url('${imageUrl}')`;
+      document.getElementById("backdrop-overlay")?.classList.add("opacity-80");
+    });
 
     return () => {
       document
