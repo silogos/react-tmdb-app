@@ -1,0 +1,376 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > should mount correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="fixed inset-0 bg-black bg-opacity-100 transition-opacity duration-1000"
+        id="backdrop-overlay"
+      />
+      <div
+        class="relative w-full min-h-screen"
+      >
+        <section
+          class="overflow-hidden py-4"
+          id="hero"
+        >
+          <div
+            class="mx-auto max-w-screen-xl px-4 py-14 lg:px-8 lg:py-20"
+          >
+            <h1
+              class="text-center text-gray-300 text-4xl lg:text-7xl mb-4"
+            >
+              TMDB
+            </h1>
+            <p
+              class="text-center text-gray-300 text-base lg:text-2xl"
+            >
+              (The Movie Database)
+            </p>
+          </div>
+        </section>
+        <section
+          class="overflow-hidden py-4"
+          id="movie-list"
+        >
+          <div
+            class="mx-auto max-w-screen-xl px-6 lg:px-8"
+          >
+            <div
+              class="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4"
+            >
+              <div
+                class="flex flex-row flex-nowrap overflow-x-auto gap-4"
+              >
+                <a
+                  aria-current="page"
+                  class="px-4 py-2  text-nowrap rounded-lg bg-gray-50"
+                  data-discover="true"
+                  href="/"
+                >
+                  All
+                </a>
+                <a
+                  class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                  data-discover="true"
+                  href="/movies/now-playing"
+                >
+                  Now Playing
+                </a>
+                <a
+                  class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                  data-discover="true"
+                  href="/movies/popular"
+                >
+                  Popular
+                </a>
+                <a
+                  class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                  data-discover="true"
+                  href="/movies/top-rated"
+                >
+                  Top Rated
+                </a>
+                <a
+                  class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                  data-discover="true"
+                  href="/movies/upcoming"
+                >
+                  Upcoming
+                </a>
+              </div>
+              <form
+                novalidate=""
+              >
+                <input
+                  class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
+                  data-testid="search-input"
+                  name="query"
+                  placeholder="Search..."
+                  required=""
+                  type="search"
+                />
+              </form>
+            </div>
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+            >
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+              <div
+                class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="fixed inset-0 bg-black bg-opacity-100 transition-opacity duration-1000"
+      id="backdrop-overlay"
+    />
+    <div
+      class="relative w-full min-h-screen"
+    >
+      <section
+        class="overflow-hidden py-4"
+        id="hero"
+      >
+        <div
+          class="mx-auto max-w-screen-xl px-4 py-14 lg:px-8 lg:py-20"
+        >
+          <h1
+            class="text-center text-gray-300 text-4xl lg:text-7xl mb-4"
+          >
+            TMDB
+          </h1>
+          <p
+            class="text-center text-gray-300 text-base lg:text-2xl"
+          >
+            (The Movie Database)
+          </p>
+        </div>
+      </section>
+      <section
+        class="overflow-hidden py-4"
+        id="movie-list"
+      >
+        <div
+          class="mx-auto max-w-screen-xl px-6 lg:px-8"
+        >
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4"
+          >
+            <div
+              class="flex flex-row flex-nowrap overflow-x-auto gap-4"
+            >
+              <a
+                aria-current="page"
+                class="px-4 py-2  text-nowrap rounded-lg bg-gray-50"
+                data-discover="true"
+                href="/"
+              >
+                All
+              </a>
+              <a
+                class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                data-discover="true"
+                href="/movies/now-playing"
+              >
+                Now Playing
+              </a>
+              <a
+                class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                data-discover="true"
+                href="/movies/popular"
+              >
+                Popular
+              </a>
+              <a
+                class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                data-discover="true"
+                href="/movies/top-rated"
+              >
+                Top Rated
+              </a>
+              <a
+                class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+                data-discover="true"
+                href="/movies/upcoming"
+              >
+                Upcoming
+              </a>
+            </div>
+            <form
+              novalidate=""
+            >
+              <input
+                class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
+                data-testid="search-input"
+                name="query"
+                placeholder="Search..."
+                required=""
+                type="search"
+              />
+            </form>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+          >
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+            <div
+              class="animate-pulse aspect-[8/12] rounded-lg bg-gray-700 bg-opacity-90"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
