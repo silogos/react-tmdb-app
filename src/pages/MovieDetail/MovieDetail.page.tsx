@@ -1,18 +1,21 @@
+import PageLayout from "@/layouts/Page";
 import CreditList from "@/components/CreditList";
+import { DisplayError } from "@/components/Displays";
 import useMovieDetail from "@/hooks/useMovieDetail";
 import useCredits from "@/hooks/useCredits";
 
 import { Header, Hero, HeroShimmering } from "./MovieDetail.component";
-import useBackgroundImage from "@/hooks/useBackgroundImage";
-import { DisplayError } from "@/components/Displays";
 
 function MovieDetailPage() {
   const { data, isLoading, isError, getData } = useMovieDetail();
   const { casts, crews } = useCredits();
-  useBackgroundImage(data?.backdrop_path);
 
   return (
-    <>
+    <PageLayout
+      title={data?.original_title}
+      titleAppendAppName={true}
+      backgroundImagePath={data?.backdrop_path}
+    >
       <div className="relative w-full min-h-screen">
         <Header />
 
@@ -32,7 +35,7 @@ function MovieDetailPage() {
           </>
         )}
       </div>
-    </>
+    </PageLayout>
   );
 }
 

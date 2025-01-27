@@ -45,7 +45,7 @@ export function Hero({ data }: MovieDetailHeroProps) {
 
           <div className="py-4">
             <h1 className="text-left text-white text-xl sm:text-2xl lg:text-4xl mb-4">
-              {data.title} ({getReleaseYear(data.release_date)})
+              {data.original_title} ({getReleaseYear(data.release_date)})
             </h1>
             <div className="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-base">
               {data.genres.map((genre) => (

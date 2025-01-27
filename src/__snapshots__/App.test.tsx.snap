@@ -20,7 +20,7 @@ exports[`App > should mount correctly 1`] = `
           <h1
             class="text-center text-gray-300 text-4xl lg:text-7xl mb-4"
           >
-            TMDB
+            🎬 Movie App
           </h1>
           <p
             class="text-center text-gray-300 text-base lg:text-2xl"

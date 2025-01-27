@@ -18,7 +18,7 @@ function MovieList({
             id={movie.id}
             poster={movie.poster_path}
             releaseDate={movie.release_date}
-            title={movie.title}
+            title={movie.original_title}
             voteAverage={movie.vote_average}
           />
         ))}
