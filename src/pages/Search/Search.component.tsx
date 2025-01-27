@@ -1,5 +1,6 @@
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router";
+import SearchInput from "@/components/SearchInput";
 
 export function Header() {
   return (
@@ -16,5 +17,20 @@ export function Header() {
         </div>
       </div>
     </header>
+  );
+}
+
+export function Search({
+  queryValue,
+  handleSearch,
+}: {
+  queryValue: string;
+  handleSearch: (val: string) => void;
+}) {
+  return (
+    <>
+      <h3 className="text-gray-300 mb-4">Result for: {queryValue}</h3>
+      <SearchInput className="mb-4" onSubmit={handleSearch} />
+    </>
   );
 }

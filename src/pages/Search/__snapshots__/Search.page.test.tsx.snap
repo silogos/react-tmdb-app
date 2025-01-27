@@ -15,23 +15,9 @@ exports[`Search Page > renders correctly 1`] = `
       <div
         class="mx-auto max-w-screen-xl px-6 lg:px-8"
       >
-        <h3
-          class="text-gray-300 mb-4"
-        >
-          Result for: 
-        </h3>
-        <form
-          class="mb-4"
-        >
-          <input
-            class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
-            data-testid="search-input"
-            name="query"
-            placeholder="Search..."
-            required=""
-            type="search"
-          />
-        </form>
+        <div
+          data-testid="Search"
+        />
         <div
           data-testid="MovieList"
         />

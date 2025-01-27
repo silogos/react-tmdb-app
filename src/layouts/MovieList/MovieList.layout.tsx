@@ -1,8 +1,7 @@
-import { Outlet, useNavigate } from "react-router";
-import FilterButton from "@/components/FilterButton";
-import { Hero } from "./MovieList.component";
-import SearchInput from "@/components/SearchInput";
-import { useCallback } from "react";
+import { Outlet } from "react-router";
+
+import { Filter, Hero } from "./MovieList.component";
+import useMovieListLayout from "./MovieList.hook";
 
 const categoryList = [
   {
@@ -28,10 +27,7 @@ const categoryList = [
 ];
 
 function MovieListLayout() {
-  const navigate = useNavigate();
-  const handleSearch = useCallback((searchText: string) => {
-    navigate(`/movies/search?query=${searchText}`);
-  }, []);
+  const { handleSearch } = useMovieListLayout();
 
   return (
     <>
@@ -40,20 +36,7 @@ function MovieListLayout() {
 
         <section id="movie-list" className="overflow-hidden py-4">
           <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4">
-              <div className="flex flex-row flex-nowrap overflow-x-auto gap-4">
-                {categoryList.map(({ filterId, title }) => (
-                  <FilterButton
-                    key={filterId}
-                    filterId={filterId}
-                    title={title}
-                  />
-                ))}
-              </div>
-
-              <SearchInput onSubmit={handleSearch} />
-            </div>
-
+            <Filter categoryList={categoryList} handleSearch={handleSearch} />
             <Outlet />
           </div>
         </section>

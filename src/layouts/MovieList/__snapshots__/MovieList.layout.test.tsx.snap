@@ -16,38 +16,8 @@ exports[`MovieList Layout > renders correctly 1`] = `
         class="mx-auto max-w-screen-xl px-6 lg:px-8"
       >
         <div
-          class="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4"
-        >
-          <div
-            class="flex flex-row flex-nowrap overflow-x-auto gap-4"
-          >
-            <div
-              data-testid="FilterButton"
-            />
-            <div
-              data-testid="FilterButton"
-            />
-            <div
-              data-testid="FilterButton"
-            />
-            <div
-              data-testid="FilterButton"
-            />
-            <div
-              data-testid="FilterButton"
-            />
-          </div>
-          <form>
-            <input
-              class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
-              data-testid="search-input"
-              name="query"
-              placeholder="Search..."
-              required=""
-              type="search"
-            />
-          </form>
-        </div>
+          data-testid="Filter"
+        />
         <div
           data-testid="Outlet"
         />

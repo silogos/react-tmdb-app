@@ -44,3 +44,16 @@ exports[`Search Page Component > renders Header correctly 1`] = `
   </header>
 </div>
 `;
+
+exports[`Search Page Component > renders Search correctly 1`] = `
+<div>
+  <h3
+    class="text-gray-300 mb-4"
+  >
+    Result for: 
+  </h3>
+  <div
+    data-testid="SearchInput"
+  />
+</div>
+`;

@@ -10,7 +10,7 @@ describe("SearchInput Component", () => {
     expect(component.container).toMatchSnapshot();
   });
 
-  it("displays the correct image source", async () => {
+  it("should handle submit correctly", async () => {
     const user = userEvent.setup();
     const handleSubmit = vi.fn();
     const { getByTestId } = render(<SearchInput onSubmit={handleSubmit} />);

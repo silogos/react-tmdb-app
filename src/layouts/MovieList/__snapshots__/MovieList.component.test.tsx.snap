@@ -1,6 +1,28 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`MovieList Layout Component > renders correctly 1`] = `
+exports[`MovieList Layout Component > renders Filter correctly 1`] = `
+<div>
+  <div
+    class="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4"
+  >
+    <div
+      class="flex flex-row flex-nowrap overflow-x-auto gap-4"
+    >
+      <div
+        data-testid="FilterButton"
+      />
+      <div
+        data-testid="FilterButton"
+      />
+    </div>
+    <div
+      data-testid="SearchInput"
+    />
+  </div>
+</div>
+`;
+
+exports[`MovieList Layout Component > renders Hero correctly 1`] = `
 <div>
   <section
     class="overflow-hidden py-4"

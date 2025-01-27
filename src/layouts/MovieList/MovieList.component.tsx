@@ -1,3 +1,6 @@
+import FilterButton from "@/components/FilterButton";
+import SearchInput from "@/components/SearchInput";
+
 export function Hero() {
   return (
     <section id="hero" className="overflow-hidden py-4">
@@ -10,5 +13,28 @@ export function Hero() {
         </p>
       </div>
     </section>
+  );
+}
+
+export function Filter({
+  categoryList,
+  handleSearch,
+}: {
+  categoryList: {
+    filterId: string;
+    title: string;
+  }[];
+  handleSearch: (val: string) => void;
+}) {
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4 gap-4">
+      <div className="flex flex-row flex-nowrap overflow-x-auto gap-4">
+        {categoryList.map(({ filterId, title }) => (
+          <FilterButton key={filterId} filterId={filterId} title={title} />
+        ))}
+      </div>
+
+      <SearchInput onSubmit={handleSearch} />
+    </div>
   );
 }
