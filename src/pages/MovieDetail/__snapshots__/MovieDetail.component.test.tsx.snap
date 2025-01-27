@@ -1,0 +1,242 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MovieDetail.components > renders Header correctly 1`] = `
+<div>
+  <header
+    class="overflow-hidden mb-2 bg-gray-300 bg-opacity-20"
+  >
+    <div
+      class="mx-auto max-w-screen-xl px-8 py-4 text-gray-400"
+    >
+      <div
+        class="flex flex-row gap-4 items-stretch"
+      >
+        <div
+          class="flex flex-row justify-evenly gap-2 items-center"
+        >
+          <a
+            aria-current="page"
+            class="cursor-pointer hover:underline flex flex-row items-center text-sm active"
+            data-discover="true"
+            href="/"
+          >
+            <svg
+              aria-hidden="true"
+              class="size-6 inline"
+              data-slot="icon"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M9.78 4.22a.75.75 0 0 1 0 1.06L7.06 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L5.47 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            Back to list
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`MovieDetail.components > renders Hero correctly 1`] = `
+<div>
+  <section
+    class="relative overflow-hidden"
+    id="hero"
+  >
+    <div
+      class="mx-auto max-w-screen-xl px-8 py-2 sm:py-4 lg:py-8"
+    >
+      <div
+        class="flex flex-col lg:flex-row gap-2 lg:gap-10"
+      >
+        <div
+          data-testid="Banner"
+        />
+        <div
+          class="py-4"
+        >
+          <h1
+            class="text-left text-white text-xl sm:text-2xl lg:text-4xl mb-4"
+          >
+            Sonic the Hedgehog 3
+             (
+            2024
+            )
+          </h1>
+          <div
+            class="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-base"
+          >
+            <div
+              class="border border-gray-300 text-xs lg:text-sm px-2 py-1 rounded-full "
+            >
+              Action
+            </div>
+            <div
+              class="border border-gray-300 text-xs lg:text-sm px-2 py-1 rounded-full "
+            >
+              Science Fiction
+            </div>
+            <div
+              class="border border-gray-300 text-xs lg:text-sm px-2 py-1 rounded-full "
+            >
+              Comedy
+            </div>
+            <div
+              class="border border-gray-300 text-xs lg:text-sm px-2 py-1 rounded-full "
+            >
+              Family
+            </div>
+          </div>
+          <div
+            class="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-xs sm:text-sm lg:text-base"
+          >
+            <span
+              class="text-left font-bold text-nowrap"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-5 inline mr-1 mb-1"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.75 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM5 10.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0ZM10.25 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM7.25 8.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0ZM8 9.5A.75.75 0 1 0 8 11a.75.75 0 0 0 0-1.5Z"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M4.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-5V1.75A.75.75 0 0 0 4.75 1ZM3.5 7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              12/19/2024
+            </span>
+            <span>
+              •
+            </span>
+            <span
+              class="text-left font-bold text-nowrap"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-5 inline mr-1 mb-1"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              7.6/10
+            </span>
+            <span>
+              •
+            </span>
+            <span
+              class="text-left font-bold text-nowrap"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-5 inline mr-1"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Zm7.75-4.25a.75.75 0 0 0-1.5 0V8c0 .414.336.75.75.75h3.25a.75.75 0 0 0 0-1.5h-2.5v-3.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              1h 50m
+            </span>
+          </div>
+          <p
+            class="text-left text-gray-300 text-xs sm:text-sm lg:text-base my-4"
+          >
+            <i>
+              Try to keep up.
+            </i>
+          </p>
+          <p
+            class="text-left text-white text-sm sm:text-base lg:text-lg font-bold mb-1"
+          >
+            Overview
+          </p>
+          <p
+            class="text-left text-gray-300 text-xs sm:text-sm lg:text-base"
+          >
+            Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`MovieDetail.components > renders HeroShimmering correctly 1`] = `
+<div>
+  <div
+    class="animate-pulse mx-auto max-w-screen-xl px-8 py-2 sm:py-4 lg:py-8"
+  >
+    <div
+      class="flex flex-col lg:flex-row gap-8 lg:gap-10"
+    >
+      <div
+        class="relative lg:h-96 aspect-video bg-gray-700 bg-opacity-90 rounded-lg overflow-hidden"
+      />
+      <div
+        class="flex-1 flex flex-col gap-4"
+      >
+        <div
+          class="w-full h-8 lg:h-10 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+        <div
+          class="flex flex-row gap-4"
+        >
+          <div
+            class="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90"
+          />
+          <div
+            class="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90"
+          />
+          <div
+            class="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90"
+          />
+          <div
+            class="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90"
+          />
+        </div>
+        <div
+          class="w-3/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+        <div
+          class="w-2/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+        <div
+          class="w-3/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+        <div
+          class="w-2/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+        <div
+          class="w-1/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

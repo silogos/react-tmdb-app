@@ -10,26 +10,20 @@ vi.mock("react-router", async () => {
   return {
     ...originalModule,
     useNavigate: vi.fn(),
+    Outlet: () => <div data-testid="Outlet" />,
   };
 });
+vi.mock("./MovieList.component");
+vi.mock("@/components/FilterButton/FilterButton.component");
 
-describe("MovieList Page", () => {
+describe("MovieList Layout", () => {
   it("renders correctly", () => {
     const component = render(
       <BrowserRouter>
         <MovieList />
       </BrowserRouter>
     );
-    expect(component).toBeTruthy();
-  });
-
-  it("renders toMatchSnapshot", () => {
-    const component = render(
-      <BrowserRouter>
-        <MovieList />
-      </BrowserRouter>
-    );
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 
   it("search", async () => {

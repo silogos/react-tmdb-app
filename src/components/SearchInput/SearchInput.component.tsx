@@ -12,7 +12,7 @@ function SearchInput({ onSubmit, className }: SearchInputProps) {
   );
 
   return (
-    <form className={className} onSubmit={handleSubmit} noValidate>
+    <form className={className} onSubmit={handleSubmit}>
       <input
         data-testid="search-input"
         name="query"

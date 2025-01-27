@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Search Page Component > renders Header correctly 1`] = `
+<div>
+  <header
+    class="overflow-hidden bg-gray-300 bg-opacity-20"
+  >
+    <div
+      class="mx-auto max-w-screen-xl px-8 py-4"
+    >
+      <div
+        class="flex items-stretch"
+      >
+        <a
+          aria-current="page"
+          class="cursor-pointer hover:underline flex flex-row items-center text-base rounded-lg text-nowrap text-gray-400 active"
+          data-discover="true"
+          href="/"
+        >
+          <svg
+            aria-hidden="true"
+            class="size-6 inline"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span
+            class="hidden lg:block"
+          >
+            Back to list
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;

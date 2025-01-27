@@ -6,7 +6,8 @@ import userEvent from "@testing-library/user-event";
 describe("SearchInput Component", () => {
   it("renders correctly", () => {
     const component = render(<SearchInput onSubmit={() => {}} />);
-    expect(component).toBeTruthy();
+
+    expect(component.container).toMatchSnapshot();
   });
 
   it("displays the correct image source", async () => {

@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MovieList Layout Component > renders correctly 1`] = `
+<div>
+  <section
+    class="overflow-hidden py-4"
+    id="hero"
+  >
+    <div
+      class="mx-auto max-w-screen-xl px-4 py-14 lg:px-8 lg:py-20"
+    >
+      <h1
+        class="text-center text-gray-300 text-4xl lg:text-7xl mb-4"
+      >
+        TMDB
+      </h1>
+      <p
+        class="text-center text-gray-300 text-base lg:text-2xl"
+      >
+        (The Movie Database)
+      </p>
+    </div>
+  </section>
+</div>
+`;

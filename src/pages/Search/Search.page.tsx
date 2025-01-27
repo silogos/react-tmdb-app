@@ -2,9 +2,9 @@ import MovieListComponent from "@/components/MovieList";
 import SearchInput from "@/components/SearchInput";
 import useBackgroundImage from "@/hooks/useBackgroundImage";
 import useMovies from "@/hooks/useMovies";
-import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { useCallback, useEffect } from "react";
-import { NavLink, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
+import { Header } from "./Search.component";
 
 function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -37,19 +37,7 @@ function SearchPage() {
 
   return (
     <div className="relative w-full min-h-screen">
-      <header className="overflow-hidden bg-gray-300 bg-opacity-20">
-        <div className="mx-auto max-w-screen-xl px-8 py-4">
-          <div className="flex items-stretch">
-            <NavLink
-              to="/"
-              className="cursor-pointer hover:underline flex flex-row items-center text-base rounded-lg text-nowrap text-gray-400"
-            >
-              <ChevronLeftIcon className="size-6 inline" />
-              <span className="hidden lg:block">Back to list</span>
-            </NavLink>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section id="movie-list" className="overflow-hidden py-4">
         <div className="mx-auto max-w-screen-xl px-6 lg:px-8">

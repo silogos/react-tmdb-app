@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchInput Component > renders correctly 1`] = `
+<div>
+  <form>
+    <input
+      class="w-full border-2 rounded-lg  px-4 py-2 bg-white"
+      data-testid="search-input"
+      name="query"
+      placeholder="Search..."
+      required=""
+      type="search"
+    />
+  </form>
+</div>
+`;

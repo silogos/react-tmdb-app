@@ -1,4 +1,4 @@
-export function MovieListHero() {
+export function Hero() {
   return (
     <section id="hero" className="overflow-hidden py-4">
       <div className="mx-auto max-w-screen-xl px-4 py-14 lg:px-8 lg:py-20">

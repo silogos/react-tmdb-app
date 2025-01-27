@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router";
 import FilterButton from "@/components/FilterButton";
-import { MovieListHero } from "./MovieList.components";
+import { Hero } from "./MovieList.component";
 import SearchInput from "@/components/SearchInput";
 import { useCallback } from "react";
 
@@ -36,7 +36,7 @@ function MovieListLayout() {
   return (
     <>
       <div className="relative w-full min-h-screen">
-        <MovieListHero />
+        <Hero />
 
         <section id="movie-list" className="overflow-hidden py-4">
           <div className="mx-auto max-w-screen-xl px-6 lg:px-8">

@@ -19,20 +19,17 @@ describe("FilterButton Component", () => {
     },
   ]);
 
-  it("renders correctly", () => {
-    const component = render(<RouterStub initialEntries={["/popular"]} />);
-    expect(component.getByText(/Popular Filter/)).toBeInTheDocument();
-    expect(component).toBeTruthy();
-  });
-
   it("displays the correct bg when active", () => {
     const component = render(<RouterStub initialEntries={["/popular"]} />);
+
     expect(component.getByText(/Popular Filter/)).toHaveClass("bg-gray-50");
+    expect(component.container).toMatchSnapshot();
   });
 
   it("displays the correct bg when inactive", () => {
     const component = render(<RouterStub initialEntries={["/upcoming"]} />);
 
     expect(component.getByText(/Popular Filter/)).toHaveClass("bg-gray-400");
+    expect(component.container).toMatchSnapshot();
   });
 });

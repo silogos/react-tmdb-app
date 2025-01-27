@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilterButton Component > displays the correct bg when active 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="px-4 py-2  text-nowrap rounded-lg bg-gray-50"
+    data-discover="true"
+    href="/popular"
+  >
+    Popular Filter
+  </a>
+</div>
+`;
+
+exports[`FilterButton Component > displays the correct bg when inactive 1`] = `
+<div>
+  <a
+    class="px-4 py-2  text-nowrap rounded-lg bg-gray-400"
+    data-discover="true"
+    href="/popular"
+  >
+    Popular Filter
+  </a>
+</div>
+`;

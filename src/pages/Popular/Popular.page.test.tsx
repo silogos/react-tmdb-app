@@ -1,15 +1,26 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, Mock, vi } from "vitest";
 import Popular from "./Popular.page";
 import { render } from "@testing-library/react";
+import useMovies from "@/hooks/useMovies";
+import { BrowserRouter } from "react-router";
+import { dummyMovies } from "@/constants/dummyData";
+
+vi.mock("@/hooks/useMovies");
+vi.mock("@/components/MovieList");
 
 describe("Popular Page", () => {
   it("renders correctly", () => {
-    const component = render(<Popular />);
-    expect(component).toBeTruthy();
-  });
+    (useMovies as Mock).mockReturnValue({
+      data: dummyMovies,
+      isLoading: false,
+      isError: false,
+    });
+    const component = render(
+      <BrowserRouter>
+        <Popular />
+      </BrowserRouter>
+    );
 
-  it("renders toMatchSnapshot", () => {
-    const component = render(<Popular />);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 });

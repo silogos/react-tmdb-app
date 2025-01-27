@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 
 function useMovieDetail() {
   const params = useParams();
-  const { data, isLoading, isError } = useFetch<MovieDetail>({
+  const { data, isLoading, isError, getData } = useFetch<MovieDetail>({
     path: `/movie/${params.movieId}`,
   });
 
@@ -12,6 +12,7 @@ function useMovieDetail() {
     data,
     isLoading,
     isError,
+    getData,
   };
 }
 

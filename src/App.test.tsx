@@ -5,6 +5,6 @@ import App from "App";
 describe("App", () => {
   it("should mount correctly", () => {
     const component = render(<App />);
-    expect(component).toMatchSnapshot();
+    expect(component.baseElement).toMatchSnapshot();
   });
 });

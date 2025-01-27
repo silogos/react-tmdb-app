@@ -1,0 +1,66 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MovieList.component > renders correctly when hasMoreData true 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+  />
+  <div
+    data-testid="ListEmpty"
+  />
+  <button
+    class="my-8 w-full text-center py-2 p-8 bg-gray-300 rounded-lg"
+  >
+    Load More
+  </button>
+</div>
+`;
+
+exports[`MovieList.component > renders correctly when isError true 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+  />
+  <div
+    data-testid="ListError"
+  />
+</div>
+`;
+
+exports[`MovieList.component > renders correctly when isLoading true 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+  >
+    <div
+      data-testid="ListLoading"
+    />
+  </div>
+</div>
+`;
+
+exports[`MovieList.component > renders correctly with data 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+  >
+    <div
+      data-testid="MovieCard"
+    />
+    <div
+      data-testid="MovieCard"
+    />
+  </div>
+</div>
+`;
+
+exports[`MovieList.component > renders correctly with nodata state 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-4"
+  />
+  <div
+    data-testid="ListEmpty"
+  />
+</div>
+`;

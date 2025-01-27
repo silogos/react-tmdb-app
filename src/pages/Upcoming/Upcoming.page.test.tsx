@@ -1,15 +1,26 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, Mock, vi } from "vitest";
 import Upcoming from "./Upcoming.page";
 import { render } from "@testing-library/react";
+import useMovies from "@/hooks/useMovies";
+import { BrowserRouter } from "react-router";
+import { dummyMovies } from "@/constants/dummyData";
+
+vi.mock("@/hooks/useMovies");
+vi.mock("@/components/MovieList");
 
 describe("Upcoming Page", () => {
   it("renders correctly", () => {
-    const component = render(<Upcoming />);
-    expect(component).toBeTruthy();
-  });
+    (useMovies as Mock).mockReturnValue({
+      data: dummyMovies,
+      isLoading: false,
+      isError: false,
+    });
+    const component = render(
+      <BrowserRouter>
+        <Upcoming />
+      </BrowserRouter>
+    );
 
-  it("renders toMatchSnapshot", () => {
-    const component = render(<Upcoming />);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 });

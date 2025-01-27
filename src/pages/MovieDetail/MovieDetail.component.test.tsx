@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { MovieDetailHeader, MovieDetailHero } from "./MovieDetail.components";
+import { describe, it, expect, vi } from "vitest";
+import { Header, Hero, HeroShimmering } from "./MovieDetail.component";
 import { render } from "@testing-library/react";
 import { MovieDetail } from "@/types/Movie.types";
 import { BrowserRouter } from "react-router";
@@ -138,20 +138,28 @@ const dummyData: MovieDetail = {
   vote_count: 725,
 };
 
-describe("MovieDetailHeader Component", () => {
-  it("renders correctly", () => {
+vi.mock("@/components/Banner/Banner.component");
+
+describe("MovieDetail.components", () => {
+  it("renders Header correctly", () => {
     const component = render(
       <BrowserRouter>
-        <MovieDetailHeader data={dummyData} />
+        <Header />
       </BrowserRouter>
     );
-    expect(component).toBeTruthy();
-  });
-});
 
-describe("MovieDetailHero Component", () => {
-  it("renders correctly", () => {
-    const component = render(<MovieDetailHero data={dummyData} />);
-    expect(component).toBeTruthy();
+    expect(component.container).toMatchSnapshot();
+  });
+
+  it("renders Hero correctly", () => {
+    const component = render(<Hero data={dummyData} />);
+
+    expect(component.container).toMatchSnapshot();
+  });
+
+  it("renders HeroShimmering correctly", () => {
+    const component = render(<HeroShimmering />);
+
+    expect(component.container).toMatchSnapshot();
   });
 });
