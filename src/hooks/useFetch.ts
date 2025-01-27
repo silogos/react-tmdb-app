@@ -26,6 +26,7 @@ function useFetch<T>({
 
   const getData = useCallback(async () => {
     try {
+      setIsError(false);
       setIsLoading(true);
       const res = await fetch(`${BASE_URL}${path}${query}`, {
         method: "GET",
