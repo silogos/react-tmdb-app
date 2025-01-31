@@ -1,7 +1,7 @@
 export type MovieCardProps = {
   id: number;
   title: string;
-  releaseDate: string;
+  releaseDate?: string;
   poster: string;
-  voteAverage: number;
+  voteAverage?: number;
 };

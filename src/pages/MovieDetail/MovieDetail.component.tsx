@@ -45,7 +45,10 @@ export function Hero({ data }: MovieDetailHeroProps) {
 
           <div className="py-4">
             <h1 className="text-left text-white text-xl sm:text-2xl lg:text-4xl mb-4">
-              {data.original_title} ({getReleaseYear(data.release_date)})
+              {data.original_title}
+              {data?.release_date
+                ? `(${getReleaseYear(data.release_date)})`
+                : ""}
             </h1>
             <div className="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-base">
               {data.genres.map((genre) => (
@@ -60,7 +63,9 @@ export function Hero({ data }: MovieDetailHeroProps) {
             <div className="flex flex-row flex-wrap items-center gap-3 mb-4 text-gray-300 text-xs sm:text-sm lg:text-base">
               <span className="text-left font-bold text-nowrap">
                 <CalendarDaysIcon className="size-5 inline mr-1 mb-1" />
-                {formatReleaseDate(data.release_date)}
+                {data?.release_date
+                  ? formatReleaseDate(data.release_date)
+                  : "-"}
               </span>
               <span>•</span>
               <span className="text-left font-bold text-nowrap">
@@ -98,19 +103,18 @@ export function HeroShimmering() {
         <div
           className={`relative lg:h-96 aspect-video bg-gray-700 bg-opacity-90 rounded-lg overflow-hidden`}
         ></div>
-        <div className="flex-1 flex flex-col gap-4">
-          <div className="w-full h-8 lg:h-10 rounded-lg bg-gray-700 bg-opacity-90" />
+        <div className="flex-1 flex flex-col gap-4 lg:py-4">
+          <div className="w-3/4 h-8 lg:h-10 rounded-lg bg-gray-700 bg-opacity-90" />
           <div className="flex flex-row gap-4">
             <div className="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90" />
             <div className="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90" />
             <div className="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90" />
-            <div className="w-20 h-6 lg:h-8 rounded-full bg-gray-700 bg-opacity-90" />
           </div>
-          <div className="w-3/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90" />
-          <div className="w-2/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90" />
-          <div className="w-3/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90" />
-          <div className="w-2/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90" />
-          <div className="w-1/4 h-6 lg:h-8 rounded-lg bg-gray-700 bg-opacity-90" />
+          <div className="w-3/4 h-4 lg:h-6 rounded-lg bg-gray-700 bg-opacity-90" />
+          <div className="w-2/4 h-4 lg:h-6 rounded-lg bg-gray-700 bg-opacity-90" />
+          <div className="w-3/4 h-4 lg:h-6 rounded-lg bg-gray-700 bg-opacity-90" />
+          <div className="w-2/4 h-4 lg:h-6 rounded-lg bg-gray-700 bg-opacity-90" />
+          <div className="w-1/4 h-4 lg:h-6 rounded-lg bg-gray-700 bg-opacity-90" />
         </div>
       </div>
     </div>

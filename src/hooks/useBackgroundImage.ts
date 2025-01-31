@@ -1,4 +1,4 @@
-import { loadImage, wait } from "@/utils/Common.utils";
+import { loadImage } from "@/utils/Common.utils";
 import { useEffect } from "react";
 
 function useBackgroundImage(imagePath?: string) {
@@ -7,7 +7,7 @@ function useBackgroundImage(imagePath?: string) {
     let isCancelled = false;
     const imageUrl = `https://image.tmdb.org/t/p/w300/${imagePath}`;
 
-    Promise.all([loadImage(imageUrl), wait(500)]).then(() => {
+    loadImage(imageUrl).then(() => {
       if (isCancelled) return;
       document.body.style.backgroundImage = `url('${imageUrl}')`;
       document.getElementById("backdrop-overlay")?.classList.add("opacity-80");

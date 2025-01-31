@@ -7,6 +7,7 @@ import useSearchPage from "./Search.hook";
 function SearchPage() {
   const {
     queryValue,
+    fetchData,
     data,
     isLoading,
     isError,
@@ -31,6 +32,7 @@ function SearchPage() {
               movies={data}
               isLoading={isLoading}
               isError={isError}
+              onReload={fetchData}
               hasMoreData={hasMoreData}
               onLoadMore={fetchNextData}
             />

@@ -1,4 +1,5 @@
 import { DisplayError, DisplayNoData } from "@/components/Displays";
+import { MoviListErrorProps } from "./MovieList.type";
 
 function MovieCardShimmenring() {
   return (
@@ -12,8 +13,8 @@ export function ListLoading() {
     .map((_, idx) => <MovieCardShimmenring key={idx.toString()} />);
 }
 
-export function ListError() {
-  return <DisplayError />;
+export function ListError(props: MoviListErrorProps) {
+  return <DisplayError {...props} />;
 }
 
 export function ListEmpty() {

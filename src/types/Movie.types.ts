@@ -1,18 +1,18 @@
 export type Movie = {
   adult: boolean;
   backdrop_path: string;
-  genre_ids: number[];
+  genre_ids?: number[];
   id: number;
   original_language: string;
   original_title: string;
-  overview: string;
-  popularity: number;
+  overview?: string;
+  popularity?: number;
   poster_path: string;
-  release_date: string;
+  release_date?: string;
   title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
+  video?: boolean;
+  vote_average?: number;
+  vote_count?: number;
 };
 
 export type Credit = {
@@ -47,7 +47,7 @@ export interface MovieDetail {
   poster_path: string;
   production_companies: ProductionCompany[];
   production_countries: ProductionCountry[];
-  release_date: string;
+  release_date?: string;
   revenue: number;
   runtime: number;
   spoken_languages: SpokenLanguage[];

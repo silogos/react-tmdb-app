@@ -11,6 +11,7 @@ function useSearchPage() {
     isLoading,
     isError,
     hasMoreData,
+    fetchData,
     fetchNextData,
     setSearchText,
   } = useMovies({
@@ -33,6 +34,7 @@ function useSearchPage() {
 
   return {
     queryValue,
+    fetchData,
     data,
     isLoading,
     isError,

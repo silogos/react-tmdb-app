@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { TMDB_API_KEY } from "../config";
+import { wait } from "@/utils/Common.utils";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const headers = {
@@ -7,11 +8,12 @@ const headers = {
   Authorization: `Bearer ${TMDB_API_KEY}`,
 };
 
-type UseFetch<T> = {
+type UseFetchOptions<T> = {
   initialData?: T;
   path?: string;
   query?: string;
   immediately?: boolean;
+  delay?: number;
 };
 
 function useFetch<T>({
@@ -19,7 +21,8 @@ function useFetch<T>({
   path = "",
   query = "",
   immediately = true,
-}: UseFetch<T>) {
+  delay = 600,
+}: UseFetchOptions<T>) {
   const [data, setData] = useState<T | undefined>(initialData);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -28,11 +31,18 @@ function useFetch<T>({
     try {
       setIsError(false);
       setIsLoading(true);
-      const res = await fetch(`${BASE_URL}${path}${query}`, {
-        method: "GET",
-        headers: headers,
-      });
-      const responseJson = await res.json();
+      const [fetchData] = await Promise.allSettled([
+        fetch(`${BASE_URL}${path}${query}`, {
+          method: "GET",
+          headers: headers,
+        }),
+        wait(delay),
+      ]);
+      if (fetchData.status !== "fulfilled" || !fetchData.value.ok)
+        throw new Error("Error fetch data");
+
+      const response = fetchData.value;
+      const responseJson = await response.json();
 
       setData(responseJson);
 
@@ -40,6 +50,7 @@ function useFetch<T>({
     } catch (error) {
       console.error("useFetch error:", error);
       setIsError(true);
+      throw error;
     } finally {
       setIsLoading(false);
     }

@@ -6,6 +6,7 @@ function MovieList({
   movies,
   isLoading,
   isError,
+  onReload,
   hasMoreData,
   onLoadMore,
 }: MovieListProps) {
@@ -27,7 +28,7 @@ function MovieList({
 
       {!isLoading && (
         <>
-          {isError && <ListError />}
+          {isError && <ListError onReload={onReload} />}
           {!isError && movies.length < 1 && <ListEmpty />}
           {hasMoreData && (
             <button

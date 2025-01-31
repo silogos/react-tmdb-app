@@ -39,6 +39,8 @@ function useMovies({
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true);
+      setIsError(false);
+      setHasMoreData(false);
       const res: {
         page: number;
         total_pages: number;
